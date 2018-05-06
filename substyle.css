@@ -1,0 +1,206 @@
+/*nav + footer are styled in style.css, banner image and after are done here */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: 'Source Sans Pro', sans-serif;
+    
+}
+
+body {
+    font-weight: 300;
+    background: #101010;
+}
+
+
+#subSectionZero {
+    background-color: #101010;
+    margin: 0px;
+    
+    background-size: cover;
+    width: 100%;
+
+    min-height: 100vh;
+
+     /* -60PX ENSURES THE BANNER AND NAV ARE ALL THE WAY AT THE TOP ONCE BANNER TEXT IS ADDED*/
+     margin-top: 0px;
+     /* -60PX BOTTOM ENSURES THERES NO GAP BETWEEN BANNER AND SECTION ONE*/
+     margin-bottom: 0px;
+     /*NAVBAR IS 70PX HIGH SO YOU'RE ACCOUNTING FOR THAT*/
+
+}
+
+#subContent p {
+    text-align: justify;
+    color: white;
+    font-size: 20px;
+    line-height: 40px;
+    padding-right: 25%;
+    padding-left: 5%;
+    padding-bottom: 100px;
+}
+
+
+#subHeading {
+    /* margin top removes the white space between sections once text is added */
+    margin-top: 0px;
+    padding-top: 80px;
+    /*padding-bottom: 10px;*/
+    color: white;
+    font-size:60px;
+    font-weight: bold;
+    text-align: left;
+    letter-spacing: 5px;
+    padding-right: 25%;
+    padding-left: 5%;
+}
+
+#subSectionOne {
+    background-color: #d20000;
+    margin: 0px;
+    background-size: cover;
+    width: 100%;
+    min-height: 100vh;
+
+     /* without margin top+bottom theres odd white space between sections and navbar */
+     margin-top: -20px;
+     margin-bottom: -20px;
+}
+
+#subContentOne p {
+    text-align: justify;
+    color: white;
+    font-size: 20px;
+    line-height: 40px;
+    padding-right: 5%;
+    padding-left: 25%;
+    padding-bottom: 100px;
+}
+
+#subContentOne a {
+    text-decoration: none;
+    color: white;
+}
+
+#subContentOne a:hover {
+    text-decoration: none;
+    color: lightcoral;
+}
+
+#subHeadingOne {
+    /* margin top removes the white space between sections once text is added */
+    margin-top: 0px;
+    padding-top: 50px;
+    /*padding-bottom: 10px;*/
+    color: white;
+    font-size:60px;
+    font-weight: bold;
+    text-align: right;
+    letter-spacing: 5px;
+    padding-right: 5%;
+    padding-left: 25%;
+}
+
+@media(max-width: 920px) {
+    #subContent p {
+        text-align: justify;
+        color: white;
+        font-size: 20px;
+        line-height: 40px;
+        padding-right: 25%;
+        padding-left: 25%;
+        padding-bottom: 100px;
+    }   
+    
+    #subHeading {
+        /* margin top removes the white space between sections once text is added */
+        margin-top: 0px;
+        padding-top: 50px;
+        color: white;
+        font-size:60px;
+        font-weight: bold;
+        text-align: center;
+        letter-spacing: 25px;
+        padding-right: 25%;
+        padding-left: 25%;
+    }
+
+    #subContentOne p {
+        text-align: justify;
+        color: white;
+        font-size: 20px;
+        line-height: 40px;
+        padding-right: 25%;
+        padding-left: 25%;
+        padding-bottom: 100px;  
+    }
+    
+    
+    #subHeadingOne {
+        /* margin top removes the white space between sections once text is added */
+        margin-top: 0px;
+        padding-top: 50px;
+        color: white;
+        font-size:60px;
+        font-weight: bold;
+        text-align: center;
+        letter-spacing: 25px;
+        padding-right: 25%;
+        padding-left: 25%;
+    }
+
+}
+
+@media(max-width: 650px){
+    #subContent p {
+        text-align: justify;
+        color: white;
+        font-size: 20px;
+        line-height: 40px;
+        padding-right: 5%;
+        padding-left: 5%;
+        padding-bottom: 100px;
+    }
+    
+    
+    #subHeading {
+        /* margin top removes the white space between sections once text is added */
+        margin-top: 0px;
+        padding-top: 50px;
+        
+        color: white;
+        font-size:60px;
+        font-weight: bold;
+        text-align: center;
+        letter-spacing: 25px;
+        padding-right: 5%;
+        padding-left: 5%;
+    }
+
+    #subContentOne p {
+        text-align: justify;
+        color: white;
+        font-size: 20px;
+        line-height: 40px;
+        padding-right: 5%;
+        padding-left: 5%;
+        padding-bottom: 100px;
+        
+    }
+    
+    #subHeadingOne {
+        /* margin top removes the white space between sections once text is added */
+        margin-top: 0px;
+        padding-top: 50px;
+        padding-bottom: 10px;
+        color: white;
+        font-size:60px;
+        font-weight: bold;
+        text-align: center;
+        letter-spacing: 25px;
+        padding-right: 5%;
+        padding-left: 5%;
+    }
+
+}

@@ -1,0 +1,823 @@
+/*red #d20000 */
+/*charcoal #101010*/
+/* padding-bottom usually prevents elements from falling out of a section when resized */
+/* padding-top/bottom: 60px; - accounts for nav */
+
+html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      font-family: 'Source Sans Pro', sans-serif;
+      overflow-x: hidden;
+}
+
+body {
+      font-weight: 300;
+      background-color: #101010;
+}
+
+::selection {
+      background: #d64a4a; 
+}
+::-moz-selection {
+      background: #d64a4a; 
+}
+
+
+.logo {
+      width: 170px;
+      height: 35px;
+      position: fixed;
+      float: left;
+      margin: 8px 10px;
+}
+
+
+/* for side page logos like 'ted' and 'posts' - used as .logo class has specified
+functionality in js file */
+
+.logoSide {
+      width: 170px;
+      height: 35px;
+      position: fixed;
+      float: left;
+      margin: 8px 10px;
+}
+
+
+nav {
+      position: fixed;
+      width: 100%;
+      /* z-index ensures the element is always on top */
+      z-index: 4;
+}
+
+/*styling of the nav bar on desktop view - mobile is under @media */
+nav ul {
+      line-height: 40px;
+      overflow: hidden;
+      text-align: right;
+      margin: 0;
+      transition: 1s;
+}
+
+nav.black ul {
+      background: #101010;
+}
+
+nav ul li {
+      display: inline-block;
+      padding: 15px 20px;
+}
+
+nav ul li a {
+      position: relative;
+      padding-bottom: 15px;
+      letter-spacing: 2px;
+      font-size: 15px;
+      line-height: 16px;
+      font-weight: 400;
+      color: white;
+      text-decoration: none;
+}
+
+/* creating the line when nav element is hovered on */
+nav ul li a::before {
+      content: '';
+      position: absolute;
+      bottom: 3px;
+      height: 2px;
+      width: 100%;
+      background-color: #d20000;
+      transform: scale(0, 1);
+      transition: transform 0.2s ease-out;
+}
+
+nav ul li a:hover {
+      text-decoration: none;
+      color: #d20000;
+      transition: 0.5s;
+}
+
+nav ul li a:hover::before { 
+      transform: scale(1, 1);
+}
+
+.menu-icon {
+      line-height: 40px;
+      background: #101010;
+      text-align: right;
+      padding: 15px;
+      cursor: pointer;
+      color: #fff;
+      display: none;
+}
+
+/* min-height and width are pretty much the building blocks of each section */
+
+/*#sectionZero,#sectionOne,#sectionTwo,#sectionThree,#sectionFour,#sectionFive,#sectionSix {
+      min-height: 100vh;
+      width: 100%;
+}*/
+
+/*WEBSITE BANNER - hero image */
+#sectionZero {
+      background: url(imgs/banner.jpg) no-repeat 50% 50%;
+      background-size: cover;
+      min-height: 100vh;
+       /* -60PX ensures the banner and nav are all the way at the top once the banner text is added */
+       margin-top: -60px;
+       /* -60PX bottom ensures theres no gap between the banner and sectionOne */
+       margin-bottom: -60px;
+       /* navbar is approx 70px high so you're accounting for that */
+}
+
+/* padding stuff in #bannerText will harm the nav, so do that under bannerText p */
+#bannerText {
+      /*text-align: right;*/
+      text-align: center;
+      color: white;
+      /*shadow needed to see text over image */
+      text-shadow: 2px 2px 20px rgb(0, 0, 0);
+}
+
+#bannerText p {
+      padding-top: 550px;
+      letter-spacing: 3px;
+      font-weight: 600;
+      font-size:60px;
+      line-height: 80px;      
+}
+
+/* ABOUT SECTION */
+#sectionOne {
+      background-color: #101010;
+      background-size: cover;
+      margin-top: 0px;
+      min-height: 100vh;
+}
+
+.heading {
+      /* margin top removes the white space between sections once text is added */
+      margin-top: 0px;
+      padding-top: 50px;
+      color: white;
+      font-size:60px;
+      font-weight: bold;
+      text-align: center;
+      letter-spacing: 5px;
+      word-wrap: break-word;
+}
+
+.contentOne p {  
+      text-align: justify;
+      color: white;
+      font-size: 20px;
+      line-height: 40px;
+      padding-right: 25%;
+      padding-left: 25%;      
+      
+}
+
+/* buttons used are defined here */
+.button {
+      color: #FFF;
+      border: 2px solid #d20000;
+      padding: 18px 30px;
+      display: inline-block;
+      font-size: 15px;
+      letter-spacing: 1px;
+      text-decoration: none;
+      cursor: pointer;
+      box-shadow: inset 0 0 0 0 #d20000;
+      transition: ease-out 0.8s;
+      margin-right: 10px;
+      font-weight: 400;
+}
+    
+.button:hover {
+      box-shadow: inset 400px 0 0 0 #d20000;
+}    
+    
+.buttonContainer {
+      width: 100%;
+      margin: 20px auto 0 auto;
+      text-align: center;
+      padding-bottom: 60px;
+}
+
+/* button container for the banner button */
+.buttonContainer2 {
+      width: 100%;
+      margin-top: -40px;
+      text-align: center;
+      /* padding bottom prevents the button from falling out of the section when the 
+      screen becomes too small */
+      padding-bottom: 60px;
+}
+
+/* button & button container for the whakapapa section */
+.buttonContainer3 {
+      text-align: right;
+      padding-right: 75px;
+}
+
+.button3 {
+      color: #FFF;
+      border: 2px solid #FFF;
+      padding: 18px 30px;
+      display: inline-block;
+      font-size: 15px;
+      letter-spacing: 1px;
+      text-decoration: none;
+      cursor: pointer;
+      box-shadow: inset 0 0 0 0 #FFF;
+      transition: ease-out 0.8s;
+      margin-right: 10px;
+      font-weight: 400;
+}
+    
+.button3:hover {
+      box-shadow: inset 400px 0 0 0 #FFF;
+      color: #d20000;
+}    
+
+/* WHAKAPAPA SECTION */
+ #sectionTwo::selection{
+      background: blue;
+}
+
+#sectionTwo {
+      background-color: #d20000;
+      min-height: 100vh;
+      margin-top: 0px;
+      max-width:100%;
+}
+
+
+.flex-container {
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+      align-items: flex-start;
+      padding-right: 10px;
+
+}
+
+.flex-item {
+      -webkit-order: 0;
+      -ms-flex-order: 0;
+      order: 0;
+      -webkit-flex: 1 0 auto;
+      -ms-flex: 1 0 auto;
+      flex: 1 0 auto;
+      -webkit-align-self: auto;
+      -ms-flex-item-align: auto;
+      align-self: auto;
+      margin: 15px 0 5px 5px;
+}
+
+#rightSide {
+      width: 10%;
+      display: inline-block;
+}
+
+#leftSide {
+      width: 10%;
+      /*positioning triangle */
+      padding-top: 310px;
+      text-align: center;
+      color: white; 
+      font-size: 40px;      
+}
+
+#leftSide p {
+      margin: -115px;
+      text-align: center;
+      font-weight: 600;
+      /* centres it within the triangle */
+      margin-left: -140px;
+      color: white;
+      font-size: 20px;
+}
+
+/* triangle animation */
+.fa-play {
+      -webkit-text-fill-color: transparent;
+      -webkit-text-stroke-width: 3px;
+      -webkit-text-stroke-color: white;
+      cursor: pointer;
+      transition: transform 300ms ease-in-out;
+}
+
+.fa-play:hover {
+      /*Move right*/
+      transform: translateX(40px);      
+}
+
+.headingRight {
+      padding-top: 50px;
+      margin-top: 0px;
+      padding-right: 90px;
+      color: white;
+      font-size:60px;
+      font-weight: bold;
+      text-align: right;
+      letter-spacing: 5px;
+      word-wrap: break-word;
+}
+
+.headingRight p {
+      /* reduces space between heading and content */
+      margin-bottom: -0px;
+}
+
+#contentRight {
+      padding-bottom: 200px;
+}
+
+#contentRight p {  
+      text-align: justify;
+      color: white;
+      font-size: 20px;
+      line-height: 40px;
+      padding-right: 90px;
+      padding-left: 5%;
+      padding-bottom: 10px;     
+}
+
+/* EVENT 2018 */
+#sectionThree {
+      margin-top: 0px;
+      background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0,0,0,1)), url(imgs/event2018.jpg) no-repeat 50% 50%;
+      background-size: cover;      
+      padding-bottom: 1px;
+      min-height: 100vh;      
+}
+
+/*ensures the text isn't skewed - don't worry about it now */
+#noSkew {
+      padding-top: 20px;
+      display: block;  
+}
+
+#noSkew p {   
+      
+      font-weight: 700;
+      font-size:60px;
+      line-height: 80px;      
+      color: white;
+      display: block;
+}
+
+.textType {  
+      text-align: center;
+      padding-top: 100px;
+      letter-spacing: 3px;
+}
+
+
+/* CONTACT FORM */
+#sectionFour {
+      background: rgba(0,0,0,1);
+      margin-top: 0px;
+      background-size: cover;
+      min-height: 100vh;
+}
+
+form {
+      text-align: center;
+      font-family: 'Source Sans Pro', sans-serif;
+      padding-bottom: 50px;
+}
+
+
+#sectionFour .heading {
+      color: #d20000;
+      padding-bottom: 0px;
+}
+
+.feedback-input {
+      color:#d20000;
+      font-size: 20px;
+      line-height: 22px;
+      background-color: transparent;
+      border: none;
+      border-bottom: 1px solid #d20000;
+      transition: all 0.3s;
+      padding: 13px;
+      margin-bottom: 15px;
+      width:50%;
+      box-sizing: border-box;
+      outline:0;
+}
+    
+.feedback-input:focus { 
+      border-bottom: 1px solid #d20000; 
+}
+    
+textarea {
+      height: 150px;
+      line-height: 150%;
+      resize:vertical;
+}
+
+/* styling the submit button like the other buttons */
+[type="submit"] {
+      margin-top: 10px;
+      color: #FFF;
+      border: 2px solid #d20000;
+      background: transparent;
+      padding: 18px 30px;
+      display: inline-block;
+      font-size: 15px;
+      letter-spacing: 1px;
+      text-decoration: none;
+      cursor: pointer;
+      box-shadow: inset 0 0 0 0 #d20000;
+      transition: ease-out 0.8s;
+      margin-right: 10px;
+      font-weight: 400;
+}
+
+[type="submit"]:hover {
+      box-shadow: inset 400px 0 0 0 #d20000;
+}    
+
+
+/* FOOTER */
+#sectionFive {
+      background-color: #101010;
+      margin-top: 0px;
+      background-size: cover;
+      min-height: 5vh;
+}
+
+#sectionFive p {
+      color: rgb(70, 70, 70);
+      text-align: center;
+      font-weight: 400;
+      /*padding ensures when the browser is small the text isn't on the very edge */
+      padding-left: 10px;
+      padding-right: 10px;
+      margin-top: 0px;
+}
+
+/* styling + animating the icons */
+#lab_social_icon_footer {
+      padding-top: 10px;
+      text-align: center;
+}
+    
+#lab_social_icon_footer a {
+      color: #333;
+}
+    
+#lab_social_icon_footer .social:hover {
+      -webkit-transform: scale(1.1);
+      -moz-transform: scale(1.1);
+      -o-transform: scale(1.1);
+      transform: scale(1.1);
+}
+    
+#lab_social_icon_footer .social {
+      -webkit-transform: scale(0.8);
+      -moz-transform: scale(0.8);
+      -o-transform: scale(0.8);
+      -webkit-transition-duration: 0.5s;
+      -moz-transition-duration: 0.5s;
+      -o-transition-duration: 0.5s;
+      transform: scale(0.8);
+      transition-duration: 0.5s;
+}
+
+#lab_social_icon_footer #social-fb:hover {
+      color: #3B5998;
+}
+    
+#lab_social_icon_footer #social-ln:hover {
+      color: #0077B5;
+}
+
+
+/*#sectionSix {
+    background-color: grey;
+}*/
+
+
+
+/* scroll up arrow for side pages like posts, ted */
+.back-to-top {
+      background: none;     
+      margin: 0; 
+      position: fixed;  
+      bottom: 0;            
+      right: 0;            
+      width: 70px;            
+      height: 70px;            
+      z-index: 100;            
+      display: none;            
+      text-decoration: none;            
+      color: #ffffff;
+}
+             
+.back-to-top i {
+      font-size: 60px;
+}
+
+@media(max-width: 1400px) {
+      #bannerText p {      
+            padding-top: 470px;
+            letter-spacing: 3px;
+            font-weight: 600;
+            font-size:60px;
+            line-height: 80px;      
+      }    
+}
+
+@media(max-height: 780px) {
+      /* 'about' less height */
+      .heading {
+            padding-top: 20px;
+            padding-bottom: 0px;
+      }
+
+      /* 'whakapapa' less height */
+      #leftSide {
+            margin-top: 0px;
+            margin-bottom: 0px;
+      }
+}
+
+@media(max-height: 650px) {
+      /* text and button on banner image need to move up => done with padding-top */
+      #bannerText p {     
+            padding-top: 30%;
+      }
+}
+
+
+@media(max-width: 1300px) {
+       /* Whakapapa section @media */
+      .flex-container {
+            -webkit-flex-direction: column;
+            flex-direction: column;
+      }
+
+      .flex-item {
+            -webkit-order: 0;
+            -ms-flex-order: 0;
+            order: 0;
+            -webkit-flex: none;
+            -ms-flex: none;
+            flex: none;
+            -webkit-align-self: center;
+            -ms-flex-item-align: center;
+            align-self: center;
+            margin: 0px 0px 0px 0px;
+            
+            /* move the bottom text up */
+            margin-bottom: -250px;   
+      }
+
+      #rightSide {
+            width: 100%;
+            display: inline-block;
+            padding-bottom: 200px;
+      }
+
+      .headingRight {
+            text-align: center;
+            padding-right: 0px;   
+      }
+      
+      #contentRight {
+            padding-bottom: 200px;
+            padding-left: 0px;
+            padding-right: 0px;            
+      }
+      
+      #contentRight p {  
+            text-align: justify;
+            color: white;
+            font-size: 20px;
+            line-height: 40px;
+            padding-right: 0px;
+            /* very important for whakapapa section when resized */
+            padding-right: 25%;
+            padding-left: 25%;           
+      }
+
+      .buttonContainer3 {
+            text-align: center;
+            padding-right: 0px;
+      }
+      
+      #leftSide {
+            width: 50%;
+            /* controls how close the whakapapa title is to the triangle */
+            margin-bottom: 200px;
+
+            /* controls how far the triangle is from the top of the section */
+            margin-top: -150px;
+      
+            text-align: center;
+            color: white; 
+            font-size: 40px;      
+      }
+      
+      #leftSide p {
+            text-align: center;
+            font-weight: 600;
+      
+            /* centres it within the triangle */
+            margin-left: -140px;
+      
+            color: white;
+            font-size: 20px;
+      }
+
+      
+}
+
+@media(max-width: 920px) {
+      /* mobile nav */
+      .logo {
+            position: fixed;
+            top: 0;
+            margin: 16px 10px;
+      }
+
+      .logoSide {
+            position: fixed;
+            top: 0;
+            margin: 16px 10px;
+      }
+
+      nav ul {
+            max-height: 0px;
+            background: #101010;
+            margin-top: -40px;
+            padding-bottom: 20px; 
+            
+            /* I think this centers the nav on mobile screens */
+            padding-right: 0px; 
+            padding-left: 0px;
+            padding-top: 0px;
+      }
+
+      nav.black ul {
+            background: #101010;
+      }
+
+      .showing {
+            max-height: 34em;
+      }
+
+      nav ul li {
+            width: 100%;
+            padding-bottom: 0px;
+            padding-top: 0px;
+            padding-left: 0px;
+            text-align: center;
+      }
+
+      nav ul li a {
+            position: relative;
+      }
+
+      .menu-icon {
+            display: block;
+      }
+
+      /* About section */
+      .heading p {
+            padding-top: 40px;
+      }
+
+      .contentOne p { 
+            text-align: justify;
+            color: white;
+            font-size: 20px;
+            line-height: 40px;
+            padding-right: 15%;
+            padding-left: 15%;            
+      }
+
+      /* Button on banner */
+      buttonContainer2 {
+            padding-bottom: 60px;
+      }
+     
+      /* whakapapa media section */
+      #contentRight p {  
+            /* very important for whakapapa section when resized */
+            padding-right: 15%;
+            padding-left: 15%;
+      }
+}
+
+@media (max-height: 650px) and (min-width: 650px) {
+      .contentOne p {   
+            padding-bottom: 10px;
+      }
+
+      .buttonContainer {
+            padding-bottom: 60px;
+      }
+
+      .buttonContainer2 {     
+            padding-bottom: 100px;
+      }     
+}
+
+@media (max-width: 650px) {
+      .buttonContainer2 {
+            padding-bottom: 100px;
+      }
+}
+
+@media(max-width: 550px) {
+      .heading p {
+            padding-top: 10px;
+      }
+
+      .contentOne p {
+            text-align: justify;
+            color: white;
+            font-size: 20px;
+            line-height: 40px;
+            padding-right: 5%;
+            padding-left: 5%;
+            padding-bottom: 10px;
+      }
+
+
+      #contentRight p {  
+            /* very important for whakapapa section when resized */
+            padding-right: 5%;
+            padding-left: 5%;
+      }
+
+      .buttonContainer {
+            padding-bottom: 60px;
+      }
+
+      .buttonContainer2 {
+            padding-bottom: 100px;
+      }
+}
+
+
+@media(max-width: 350px) {
+      .heading p {
+            padding-top: 10px;
+      }
+
+      .contentOne p {
+            text-align: justify;
+            color: white;
+            font-size: 20px;
+            line-height: 40px;
+            padding-right: 2%;
+            padding-left: 2%;
+            padding-bottom: 20px;
+      }
+
+      .headingRight {
+            word-break: break-all;
+      }
+
+      #contentRight p {  
+            /* very important for whakapapa section when resized */
+            padding-right: 2%;
+            padding-left: 2%;
+      }
+
+      .buttonContainer {
+            padding-bottom: 60px;
+      }
+
+      .buttonContainer2 {
+            padding-bottom: 100px;
+      }
+
+      /* make banner smaller */
+      #bannerText p {     
+            padding-top: 40%;
+            letter-spacing: 3px;
+            font-weight: 600;
+            font-size: 40px;
+            line-height: 60px;      
+            padding-bottom: 20px;
+      }
+}
+ 
