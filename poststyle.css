@@ -1,7 +1,86 @@
 #subPostZero {
-    margin: 0px;
-    background-size: cover;
-    width: 100%;
-    min-height: 100vh;
-    color: white;
+  margin: 0px;
+  background-size: cover;
+  width: 100%;
+  min-height: 100vh;
+  margin-top: 70px;
+  background-color: white;
+  padding-bottom: 70px;
+}
+.post {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 350px;
+  display: inline-block;
+  margin: 20px;
+}
+.postHeading {
+  margin-top: 0px;
+}
+#container {
+  width: 90%;
+  margin: auto;
+  text-align: center;
+}
+.image {
+  width: 100%;  
+}
+.imageContainer {
+  height: 200px;
+  overflow: hidden;
+}
+.innerContainer {
+  padding: 20px;
+  text-align: left;
+}
+.button {
+  background-color: #d64a4a;
+  border: none;
+  color: white;
+  padding: 10px 14px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+}
+@media(max-width: 888px) {
+  /* text and button on banner image need to move up => done with padding-top */
+  .post {     
+    width: 90%;
+  }
+  .imageContainer {
+    height: 250px;
+  }
+}
+
+.featureImageContainer {
+  height: 550px;
+  overflow: hidden;
+  z-index: -1;
+}
+#featureImage {
+  z-index: -1;
+  width: 100%;
+}
+
+.text {
+  margin: 100px;
+}
+h5 {
+  font-size: 25px;
+  margin-bottom: -5px;
+}
+p {
+  font-size: 18px;
+}
+iframe {
+  margin: 50px;
+  width: 860px;
+  height: 415px;
+}
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
