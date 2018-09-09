@@ -134,19 +134,20 @@ nav ul li a:hover::before {
 
 /* padding stuff in #bannerText will harm the nav, so do that under bannerText p */
 #bannerText {
-      /*text-align: right;*/
       text-align: center;
       color: white;
       /*shadow needed to see text over image */
       text-shadow: 2px 2px 20px rgb(0, 0, 0);
+      
 }
 
 #bannerText p {
-      padding-top: 550px;
+      padding-top: 400px;
       letter-spacing: 3px;
       font-weight: 600;
       font-size:60px;
-      line-height: 80px;      
+      /*line-height: 80px; */
+      letter-spacing: 20px;  
 }
 
 /* ABOUT SECTION */
@@ -508,12 +509,6 @@ textarea {
 }
 
 
-/*#sectionSix {
-    background-color: grey;
-}*/
-
-
-
 /* scroll up arrow for side pages like posts, ted */
 .back-to-top {
       background: none;     
@@ -533,15 +528,78 @@ textarea {
       font-size: 60px;
 }
 
-@media(max-width: 1400px) {
-      #bannerText p {      
-            padding-top: 470px;
-            letter-spacing: 3px;
-            font-weight: 600;
-            font-size:60px;
-            line-height: 80px;      
-      }    
+
+/* countdown settings */
+.container {
+      background-color: black;    
+      padding-top: 20px;
+      border-radius: 10px 0px 0px 0px; 
+      margin: 0; 
+      position: fixed;  
+      bottom: 0;            
+      right: 0;        
+      z-index: 100; 
+      text-align: right;
+      display: block;
+      transition: all 0.4s ease-in-out;
+      height: 200px;
 }
+
+.hide {
+      height: 50px;
+}
+
+.countdown {
+      display: inline-block;
+      font-size: 20px;
+      list-style-type: none;
+      padding: 1em;
+      text-transform: uppercase;
+      color: white;
+      letter-spacing: 3px;
+      text-align: left;
+}
+
+
+.countdown span {
+      display: block;
+      font-size: 40px;
+      
+}
+
+.container h1 {
+      color: white;
+      font-weight: 600;
+      letter-spacing: 3px;
+      padding-left: 60px;
+      margin-bottom: -20px;
+      text-align: left;
+}
+
+#toggleEvent {
+      width: 30px;
+      height: 5px;
+      padding-right: 30px;
+}
+
+#toggleEvent:hover {
+      cursor:pointer;
+}
+
+/* for devices with a large screen */
+@media(min-width: 1350px) {
+      /* move text and button up on hero img */
+      #bannerText p {
+            padding-top: 500px;
+            
+      }
+
+      .buttonContainer2 {
+            padding-bottom: 150px;
+      }
+      
+}
+
 
 @media(max-height: 780px) {
       /* 'about' less height */
@@ -713,7 +771,7 @@ textarea {
       }
 
       /* Button on banner */
-      buttonContainer2 {
+      .buttonContainer2 {
             padding-bottom: 60px;
       }
      
@@ -821,3 +879,5 @@ textarea {
       }
 }
  
+
+

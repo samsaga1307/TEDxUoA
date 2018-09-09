@@ -1,11 +1,11 @@
 //firebase setup for contact form
-var config = {
-    apiKey: "AIzaSyAkgf7EW44XTrc1QZ7xxROz19CggWsBMdk",
-    authDomain: "tedxuoa-redesign.firebaseapp.com",
-    databaseURL: "https://tedxuoa-redesign.firebaseio.com",
-    projectId: "tedxuoa-redesign",
-    storageBucket: "tedxuoa-redesign.appspot.com",
-    messagingSenderId: "388223318616"
+  var config = {
+    apiKey: "AIzaSyCxeIHl0Yp953GUGL3-Q7m3VmTReKquaiw",
+    authDomain: "tedxuoa-official.firebaseapp.com",
+    databaseURL: "https://tedxuoa-official.firebaseio.com",
+    projectId: "tedxuoa-official",
+    storageBucket: "tedxuoa-official.appspot.com",
+    messagingSenderId: "744450824546"
   };
   firebase.initializeApp(config);
 
@@ -124,3 +124,42 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
+
+//Getting the countdown working
+var second = 1000,
+      minute = second * 60,
+      hour = minute * 60,
+      day = hour * 24;
+
+var countDown = new Date('Sep 29, 2018 10:00:00').getTime(),
+    x = setInterval(function() {
+
+        var now = new Date().getTime(),
+        distance = countDown - now;
+
+        document.getElementById('days').innerText = Math.floor(distance / (day)),
+        document.getElementById('hours').innerText = Math.floor((distance % (day)) / (hour)),
+        document.getElementById('minutes').innerText = Math.floor((distance % (hour)) / (minute)),
+        document.getElementById('seconds').innerText = Math.floor((distance % (minute)) / second);
+      
+      //do something later when date is reached
+      //if (distance < 0) {
+      //  clearInterval(x);
+      //  IT'S EVENT DAY!!!;
+      //}
+
+    }, second);
+
+//showing and hiding the countdown box
+window.onload = function() {
+
+    document.getElementById('toggleEvent').addEventListener('click', function () {
+        var elem = document.querySelector('.container');
+        elem.classList.toggle('hide');
+    });
+      
+};
+      
+
+
+    
